@@ -1,7 +1,7 @@
 var jsPsych = initJsPsych({
   on_finish: function() {
-//    jsPsych.data.get().localSave('csv', 'data.csv');
-    jsPsych.data.displayData();
+    jsPsych.data.get().localSave('csv', 'data.csv');
+//    jsPsych.data.displayData();
   }
 });
 
@@ -106,10 +106,11 @@ var p6likertB = [
 var p6 = {
   type: jsPsychSurveyMultiChoice,
   button_label: "次へ",
+  randomize_question_order: true,
   preamble: "P6",
   questions: [
     {
-      prompt: "<strong>怖くて目が覚めてしまうくらいの悪夢</strong>", 
+      prompt: "<strong>怖くて目が覚めてしまうくらいの悪夢　　　　　　　　　　　　　　</strong>", 
       name: 'p6-01', options: p6likert, required: true, horizontal: true
     }, 
     {
@@ -117,11 +118,11 @@ var p6 = {
       name: 'p6-02', options: p6likert, required: true, horizontal: true
     }, 
     {
-      prompt: "<strong>あなたはどのぐらいの頻度で夢をみますか</strong>", 
+      prompt: "<strong>あなたはどのぐらいの頻度で夢をみますか　　　　　　　　　　　　</strong>", 
       name: 'p6-03', options: p6likert, required: true, horizontal: true
     }, 
     {
-      prompt: "<strong>あなたの体験する夢はどの程度はっきりしていますか</strong>", 
+      prompt: "<strong>あなたの体験する夢はどの程度はっきりしていますか　　　　　　　</strong>", 
       name: 'p6-04', options: p6likertB, required: true, horizontal: true
     }, 
   ],
@@ -146,6 +147,7 @@ var p7 = {
   type: jsPsychSurveyMultiChoice,
   button_label: "次へ",
   preamble: "P7",
+  randomize_question_order: true,
   questions: [
     {
       prompt: "<strong>嬉しさあるいは楽しさ</strong>", 
